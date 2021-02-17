@@ -1,3 +1,17 @@
+{{!-- 
+        here, you might think , ,.... "why are we now using @isLarge rather than 'this.isLarge' ""
+        => that is because, nothing is being passed as an attribute to this <Image> component.
+        => so, when there is no attribute value, there is work for @ sign
+
+        => this doubt may have came from the usage of @model value which you have seen in "index.hbs"
+        file.
+        => there, the "model" is INTERNALLY being generated and passed as an attribute to the "index.hbs" by the "routes/index.js"
+        file. This happens, since the "routes" is first thing thats being called by the "router" when an URL is called and 
+        handled by the router.
+
+        REMEMBER : URL -> router -> route( generates models for templates ) -> templates
+ --}}
+
 <button type="button" class="image {{if this.isLarge "large"}}" {{on "click" this.toggleSize}}>
     <img ...attributes>  
     <small>View {{if this.isLarge "small" "large"}}</small>
