@@ -9,6 +9,11 @@
     <div class="details">
         <h3>{{@rental.title}}</h3>
         <div class="detail owner">
+            {{!-- Here, since the @model is passed through @rental attribute of the <Rental> component, the model is
+                  now being accessed throught  the @rental property. Because, inside <Rental> comoponent the model has 
+                  been assigned to the @rental property.
+                  
+                  check "app/components/rental.hbs" file, which has the parent component for this component in this file   --}}
             <span>Owner:</span> {{@rental.owner}}
         </div>
         <div class="detail type">
