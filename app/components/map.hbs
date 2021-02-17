@@ -2,6 +2,13 @@
   <img
     alt="Map image at coordinates {{@lat}},{{@lng}}"
     ...attributes
+    {{!-- 
+            here, you might wonder why "src" method is note called 
+            but you should note that "src" is "GET method", which means it can be called 
+            just like the property of a class and shouldn't be called/executed
+            
+            BE AWARE
+      --}}
     src = {{this.src}}
     width={{@width}}
     height={{@height}}

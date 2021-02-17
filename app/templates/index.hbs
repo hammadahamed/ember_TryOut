@@ -9,11 +9,16 @@
 <div class="rentals">
   <ul class="results">
 
-    {{!-- here, the \@ symbol is used  
-        =>  because, the "model" is passed as the argument TO index.hbs FROM index.js file from  "routes" folder  --}}
-    {{!-- here, "this.model" can also be used
+    {{!-- 
+        here, the \@ symbol is used  
+        =>  because, the "model" is passed as the argument TO index.hbs FROM index.js file from  "routes" folder  
+    --}}
+
+    {{!-- 
+        here, "this.model" can also be used
         =>  because, 'based on ember's nature, the files from "routes", "components", "templates" with SAME FILE NAME
-            are visually isolated but INTERNALY INTERLINKED --}}
+            are visually isolated but INTERNALY INTERLINKED
+   --}}
     <li><Rental @rental={{@model}} /></li>
     <li><Rental @rental={{@model}} /></li>
     <li><Rental @rental={{@model}} /></li>
